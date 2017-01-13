@@ -6,7 +6,7 @@ import android.support.annotation.NonNull;
  * 日志等级
  *
  * @author dongfang
- * @date 2016/7/20
+ *         date 2016/7/20
  */
 public enum DLevel {
 

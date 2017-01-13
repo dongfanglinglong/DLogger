@@ -23,7 +23,7 @@ public final class ULog {
     /**
      * 设置控制台是否输出日志
      *
-     * @param islog
+     * @param islog true or false
      */
     public static void setConsoleStatus(boolean islog) {
         ConsolePrinter.setLog(islog);
@@ -39,7 +39,7 @@ public final class ULog {
     /**
      * 设置是否输出日志，无论是控制台还是本地持有化
      *
-     * @param islog
+     * @param islog true of false
      */
     public static void setULog(boolean islog) {
         allowD = allowE = allowI = allowV = allowW = allowWtf = islog;

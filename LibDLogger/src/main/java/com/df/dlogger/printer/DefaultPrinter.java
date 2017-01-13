@@ -36,7 +36,7 @@ import java.util.List;
  * 默认输出，会输出到控制台和文件
  *
  * @author dongfnag
- * @date 2016-12-9
+ * date 2016-12-9
  */
 public class DefaultPrinter extends ConsolePrinter {
 

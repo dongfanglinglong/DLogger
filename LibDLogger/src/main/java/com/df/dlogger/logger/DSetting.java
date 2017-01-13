@@ -14,7 +14,7 @@ import java.util.regex.Pattern;
  * 日志本地保留设置
  *
  * @author dongfang
- * @date 2016/7/26
+ *         date 2016/7/26
  */
 public class DSetting {
 
@@ -76,8 +76,8 @@ public class DSetting {
     /**
      * 自定义日志文件时的初始化信息
      *
-     * @param info
-     * @return
+     * @param info 初始化信息
+     * @return DSetting
      */
     public DSetting setInfo(String info) {
         this.info = info;
@@ -87,8 +87,8 @@ public class DSetting {
     /**
      * 增加日志文件时的初始化信息
      *
-     * @param info
-     * @return
+     * @param info 增加日志文件时的初始化信息
+     * @return DSetting
      */
     public DSetting addInfo(String info) {
         this.info = SysUtils.genInfo() + SysUtils.getLineSeparator() + info;
@@ -98,7 +98,7 @@ public class DSetting {
     /**
      * 获取日志文件编码格式
      *
-     * @return
+     * @return DSetting
      */
     public String getCharset() {
         return mCharset;
@@ -108,7 +108,7 @@ public class DSetting {
      * 设定日志文件编码格式
      *
      * @param charset 编码格式
-     * @return
+     * @return DSetting
      */
     public DSetting setCharset(@NonNull String charset) {
         mCharset = charset;
@@ -118,7 +118,7 @@ public class DSetting {
     /**
      * 获取日志的时间戳格式
      *
-     * @return
+     * @return DSetting
      */
     public String getTimeFormat() {
         return mTimeFormat;
@@ -128,7 +128,7 @@ public class DSetting {
      * 设定日志的时间戳格式
      *
      * @param timeFormat 时间戳格式
-     * @return
+     * @return DSetting
      */
     public DSetting setTimeFormat(@NonNull String timeFormat) {
         mTimeFormat = timeFormat;
@@ -138,7 +138,7 @@ public class DSetting {
     /**
      * 获取日志的时间戳时区偏移量
      *
-     * @return
+     * @return DSetting
      */
     public DZoneOffset getZoneOffset() {
         return mZoneOffset;
@@ -148,7 +148,7 @@ public class DSetting {
      * 设定日志的时间戳时区偏移量
      *
      * @param zoneOffset 时区偏移量
-     * @return
+     * @return DSetting
      */
     public DSetting setZoneOffset(@NonNull DZoneOffset zoneOffset) {
         mZoneOffset = zoneOffset;
@@ -158,7 +158,7 @@ public class DSetting {
     /**
      * 获取日志保存的文件夹名称
      *
-     * @return
+     * @return DSetting
      */
     public String getLogDir() {
         return mLogDir;
@@ -168,7 +168,7 @@ public class DSetting {
      * 设置日志保存的文件夹名称
      *
      * @param logDir 文件目录
-     * @return
+     * @return DSetting
      */
     public DSetting setLogDir(@NonNull String logDir) {
         mLogDir = logDir;
@@ -178,7 +178,7 @@ public class DSetting {
     /**
      * 获取日志保存的文件的前缀
      *
-     * @return
+     * @return DSetting
      */
     public String getLogPrefix() {
         return mLogPrefix;
@@ -188,7 +188,7 @@ public class DSetting {
      * 设置日志保存的文件的前缀
      *
      * @param logPrefix 前缀
-     * @return
+     * @return DSetting
      */
     public DSetting setLogPrefix(@NonNull String logPrefix) {
         mLogPrefix = logPrefix;
@@ -198,7 +198,7 @@ public class DSetting {
     /**
      * 获取日志文件的时间切片
      *
-     * @return
+     * @return DSegment
      */
     public DSegment getLogSegment() {
         return mLogSegment;
@@ -208,7 +208,7 @@ public class DSetting {
      * 设定日志文件的时间切片
      *
      * @param logSegment 时间切片单位
-     * @return
+     * @return DSetting
      */
     public DSetting setLogSegment(@NonNull DSegment logSegment) {
         mLogSegment = logSegment;
@@ -218,7 +218,7 @@ public class DSetting {
     /**
      * 获取日志文件的保存天数
      *
-     * @return
+     * @return DSetting
      */
     public int getRetainDays() {
         return retainDays;
@@ -228,7 +228,7 @@ public class DSetting {
      * 设定日志文件的保存时间
      *
      * @param retainDays 天
-     * @return
+     * @return DSegment
      */
     public DSetting setRetainDays(int retainDays) {
         this.retainDays = retainDays;
@@ -238,7 +238,7 @@ public class DSetting {
     /**
      * 获取日志文件的后缀名
      *
-     * @return
+     * @return DSetting
      */
     public String getLogSuffix() {
         return mLogSuffix;
@@ -248,7 +248,7 @@ public class DSetting {
      * 设定日志文件的后缀名
      *
      * @param logSuffix 后缀名，如'.log'
-     * @return
+     * @return DSetting
      */
     public DSetting setLogSuffix(String logSuffix) {
         mLogSuffix = logSuffix;

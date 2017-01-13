@@ -20,7 +20,7 @@ package com.df.dlogger.constant;
  * 日志时间切片.
  *
  * @author dongfang
- * @date 2016/7/20
+ *         date 2016/7/20
  */
 public enum DSegment {
 

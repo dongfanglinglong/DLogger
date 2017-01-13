@@ -113,8 +113,7 @@ public class FileUtils {
     /**
      * 删除多个文件
      *
-     * @param filePaths
-     * @return
+     * @param filePaths 文件路径列表
      */
     public static void delFile(@NonNull final List<String> filePaths) {
         sExecutorService.execute(new Runnable() {
@@ -131,6 +130,7 @@ public class FileUtils {
      * 根据给出路径自动选择删除文件或整个文件夹
      *
      * @param filePath :文件或文件夹路径
+     * @return 删除成功则返回true，否则false
      */
     public static boolean delFile(String filePath) {
         File file = new File(filePath);
@@ -195,11 +195,11 @@ public class FileUtils {
     }
 
     /**
-     * 拼接文件路径
+     * 拼接
      *
      * @param dirPath  目录名称
      * @param fileName 文件名称
-     * @return
+     * @return 文件完整路径
      */
     public static String makePath(String dirPath, String fileName) {
         if (dirPath.endsWith(fileName)) {
@@ -221,8 +221,8 @@ public class FileUtils {
     /**
      * 获取文件名（不带后缀）
      *
-     * @param filename
-     * @return
+     * @param filename 文件名称和后缀
+     * @return 文件名称
      */
     public static String getNameFromFilename(String filename) {
         int dotPosition = filename.lastIndexOf('.');
@@ -235,8 +235,8 @@ public class FileUtils {
     /**
      * 获取文件后缀名
      *
-     * @param filename
-     * @return
+     * @param filename 文件名称和后缀
+     * @return 文件后缀名
      */
     public static String getExtFromFilename(String filename) {
         int dotPosition = filename.lastIndexOf('.');

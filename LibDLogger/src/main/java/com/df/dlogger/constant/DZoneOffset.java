@@ -20,7 +20,7 @@ package com.df.dlogger.constant;
  * 时区偏移，N表示负，P表示正，数字表示时区，例如东八区使用P0800表示.
  *
  * @author dongfang
- * @date 2016/7/20
+ *         date 2016/7/20
  */
 public enum DZoneOffset {
 

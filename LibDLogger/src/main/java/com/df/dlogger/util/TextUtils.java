@@ -2,7 +2,7 @@ package com.df.dlogger.util;
 
 /**
  * @author dongfang
- * @date 2016/12/9
+ *         date 2016/12/9
  */
 
 public final class TextUtils {

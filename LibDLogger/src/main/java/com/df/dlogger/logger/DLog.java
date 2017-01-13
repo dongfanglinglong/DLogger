@@ -12,7 +12,7 @@ import com.df.dlogger.util.SysUtils;
  * 日志输出控制类
  *
  * @author dongfang
- * @date 2016/7/20
+ *         date 2016/7/20
  */
 public class DLog {
 
@@ -50,8 +50,8 @@ public class DLog {
     /**
      * 设置日志文件的信息
      *
-     * @param setting
-     * @return
+     * @param setting DSetting
+     * @return DLog
      */
     public DLog setDSettings(@NonNull DSetting setting) {
         mSetting = setting;

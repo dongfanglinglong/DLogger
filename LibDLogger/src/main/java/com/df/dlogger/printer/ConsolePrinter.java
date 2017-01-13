@@ -9,7 +9,7 @@ import com.df.dlogger.constant.DLevel;
  * 输出都控制台
  *
  * @author dongfang
- * @date 2016/12/9
+ * date 2016/12/9
  */
 
 public class ConsolePrinter implements Printer {
@@ -31,7 +31,7 @@ public class ConsolePrinter implements Printer {
     /**
      * 设置是否输出到控制台日志
      *
-     * @param enable
+     * @param enable true or false
      */
     public static void setLog(boolean enable) {
         LOGV = LOGD = LOGI = LOGW = LOGE = LOGWTF = enable;
