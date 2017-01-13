@@ -18,6 +18,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    //添加的那段报错代码
+    lintOptions {
+        abortOnError false
+        warning 'InvalidPackage'
+    }
 }
 
 dependencies {
