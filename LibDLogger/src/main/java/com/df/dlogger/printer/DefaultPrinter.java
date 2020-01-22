@@ -170,9 +170,9 @@ public class DefaultPrinter extends ConsolePrinter {
         long day = 24 * 3600 * 1000;
         long time = TimeUtils.getCurMillis() - day * retainDays;
         List<String> need2del = new ArrayList<>();
-        for (int i = 0, size = files.length; i < size; i++) {
-            if (files[i].lastModified() < time) {
-                need2del.add(files[i].getAbsolutePath());
+        for (File file : files) {
+            if (file.lastModified() < time) {
+                need2del.add(file.getAbsolutePath());
             }
         }
 

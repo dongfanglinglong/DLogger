@@ -82,27 +82,24 @@ public class FileUtils {
      */
     public static void write(@NonNull final String dirPath, @NonNull final String fileName,
                              @NonNull final String content, final boolean isOverride) {
-        sExecutorService.execute(new Runnable() {
-            @Override
-            public void run() {
-                String filePath = dirPath + File.separator + fileName;
-                FileOutputStream fos = null;
-                try {
-                    if (createDir(dirPath)) {
-                        File file = new File(filePath);
-                        boolean isExist = file.exists();
-                        fos = new FileOutputStream(file, !(!isExist || isOverride));
-                        fos.write(content.getBytes(DLog.getInstance().getSetting().getCharset()));
-                    }
-                } catch (IOException e) {
-                    Log.e(TAG, "write(...)#catch", e);
-                } finally {
-                    if (fos != null) {
-                        try {
-                            fos.close();
-                        } catch (IOException e) {
-                            Log.e(TAG, "write(...)#finally", e);
-                        }
+        sExecutorService.execute(() -> {
+            String filePath = dirPath + File.separator + fileName;
+            FileOutputStream fos = null;
+            try {
+                if (createDir(dirPath)) {
+                    File file = new File(filePath);
+                    boolean isExist = file.exists();
+                    fos = new FileOutputStream(file, !(!isExist || isOverride));
+                    fos.write(content.getBytes(DLog.getInstance().getSetting().getCharset()));
+                }
+            } catch (IOException e) {
+                Log.e(TAG, "write(...)#catch", e);
+            } finally {
+                if (fos != null) {
+                    try {
+                        fos.close();
+                    } catch (IOException e) {
+                        Log.e(TAG, "write(...)#finally", e);
                     }
                 }
             }
@@ -116,12 +113,9 @@ public class FileUtils {
      * @param filePaths 文件路径列表
      */
     public static void delFile(@NonNull final List<String> filePaths) {
-        sExecutorService.execute(new Runnable() {
-            @Override
-            public void run() {
-                for (int i = 0; i < filePaths.size(); i++) {
-                    delFile(filePaths.get(i));
-                }
+        sExecutorService.execute(() -> {
+            for (int i = 0; i < filePaths.size(); i++) {
+                delFile(filePaths.get(i));
             }
         });
     }

@@ -21,12 +21,12 @@ public class ConsolePrinter implements Printer {
     /** logcat里日志的最大长度. */
     private static final int MAX_LOG_LENGTH = 4000;
 
-    private static boolean LOGV = true;
-    private static boolean LOGD = true;
-    private static boolean LOGI = true;
-    private static boolean LOGW = true;
-    private static boolean LOGE = true;
-    private static boolean LOGWTF = true;
+    private static boolean LOG_V = true;
+    private static boolean LOG_D = true;
+    private static boolean LOG_I = true;
+    private static boolean LOG_W = true;
+    private static boolean LOG_E = true;
+    private static boolean LOG_WTF = true;
 
     /**
      * 设置是否输出到控制台日志
@@ -34,7 +34,7 @@ public class ConsolePrinter implements Printer {
      * @param enable true or false
      */
     public static void setLog(boolean enable) {
-        LOGV = LOGD = LOGI = LOGW = LOGE = LOGWTF = enable;
+        LOG_V = LOG_D = LOG_I = LOG_W = LOG_E = LOG_WTF = enable;
     }
 
 
@@ -55,7 +55,7 @@ public class ConsolePrinter implements Printer {
                 logSub(level, tag, sub);
                 index = lastIndex;
             }
-            logSub(level, tag, message.substring(index, message.length()));
+            // logSub(level, tag, message.substring(index, message.length()));
         } else {
             logSub(level, tag, message);
         }
@@ -95,50 +95,50 @@ public class ConsolePrinter implements Printer {
 
 
     public static void v(String tag, String mess) {
-        if (LOGV) { Log.v(tag, mess); }
+        if (LOG_V) { Log.v(tag, mess); }
     }
 
     public static void d(String tag, String mess) {
-        if (LOGD) { Log.d(tag, mess); }
+        if (LOG_D) { Log.d(tag, mess); }
     }
 
     public static void i(String tag, String mess) {
-        if (LOGI) { Log.i(tag, mess); }
+        if (LOG_I) { Log.i(tag, mess); }
     }
 
     public static void w(String tag, String mess) {
-        if (LOGW) { Log.w(tag, mess); }
+        if (LOG_W) { Log.w(tag, mess); }
     }
 
     public static void e(String tag, String mess) {
-        if (LOGE) { Log.e(tag, mess); }
+        if (LOG_E) { Log.e(tag, mess); }
     }
 
     public static void wtf(String tag, String mess) {
-        if (LOGWTF) { Log.wtf(tag, mess); }
+        if (LOG_WTF) { Log.wtf(tag, mess); }
     }
 
     public static void v(String tag, String mess, Throwable e) {
-        if (LOGV) { Log.v(tag, mess, e); }
+        if (LOG_V) { Log.v(tag, mess, e); }
     }
 
     public static void d(String tag, String mess, Throwable e) {
-        if (LOGD) { Log.d(tag, mess, e); }
+        if (LOG_D) { Log.d(tag, mess, e); }
     }
 
     public static void i(String tag, String mess, Throwable e) {
-        if (LOGI) { Log.i(tag, mess, e); }
+        if (LOG_I) { Log.i(tag, mess, e); }
     }
 
     public static void w(String tag, String mess, Throwable e) {
-        if (LOGW) { Log.w(tag, mess, e); }
+        if (LOG_W) { Log.w(tag, mess, e); }
     }
 
     public static void e(String tag, String mess, Throwable e) {
-        if (LOGE) { Log.e(tag, mess, e); }
+        if (LOG_E) { Log.e(tag, mess, e); }
     }
 
     public static void wtf(String tag, String mess, Throwable e) {
-        if (LOGE) { Log.wtf(tag, mess, e); }
+        if (LOG_WTF) { Log.wtf(tag, mess, e); }
     }
 }
